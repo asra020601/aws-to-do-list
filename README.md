@@ -8,7 +8,7 @@ This project is a simple to-do list application built using a fully serverless a
 - **AWS Lambda** – for executing backend code (business logic)
 - **Amazon API Gateway** – for exposing RESTful API endpoints
 - **Amazon DynamoDB** – for storing to-do items
-- **Amazon SNS** – for sending notifications (e.g., when a task is created or updated)
+- **Amazon SNS** – for sending notifications (when a task is created)
 
 The goal of this project is to provide a scalable and cost-effective solution for managing tasks without managing servers.
 
@@ -24,7 +24,7 @@ The app uses AWS services to create a seamless, serverless workflow:
    - Managed by API Gateway, which routes HTTP requests to the appropriate Lambda functions.
 
 3. **Business Logic:**  
-   - Implemented in Lambda functions (e.g., `createTask`, `updateTask`, `deleteTask`, `getTasks`).
+   - Implemented in Lambda functions (`createTask`, `getTasks`).
    - Each function performs specific CRUD operations.
 
 4. **Data Storage:**  
@@ -32,7 +32,7 @@ The app uses AWS services to create a seamless, serverless workflow:
    - DynamoDB offers low-latency, scalable data storage.
 
 5. **Notifications:**  
-   - SNS is used to send notifications on task-related events (e.g., task creation, updates).
+   - SNS is used to send notifications on task-related events (task creation).
 
 The following diagram illustrates the overall architecture:
 

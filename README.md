@@ -64,14 +64,6 @@ The following diagram illustrates the overall architecture:
 - **Amazon SNS**
 - **Git & GitHub** (for version control and collaboration)
 
-## Setup & Deployment
-
-### Prerequisites
-
-- An AWS account with permissions for Lambda, API Gateway, DynamoDB, S3, and SNS.
-- AWS CLI installed and configured.
-- A development environment (e.g., VS Code) with Git support.
-
 ## Usage
 
 - **Access the Frontend:**  

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belle Liste - To Do List App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #FFF0F5 0%, #FFE4E1 100%);
+            color: #4A4A4A;
+            font-family: 'Lato', sans-serif;
+            line-height: 1.6;
+        }
+
+        h1 {
+            color: #D46A6A;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        h1:after {
+            content: '🌸';
+            position: absolute;
+            right: -10px;
+            top: -15px;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 30px 40px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(255, 182, 193, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 12px 15px;
+            margin: 8px 0;
+            border: 2px solid #FFB6C1;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #D46A6A;
+            box-shadow: 0 0 8px rgba(212, 106, 106, 0.2);
+        }
+
+        input[type="submit"] {
+            background: #FF7F7F;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        input[type="submit"]:hover {
+            background: #D46A6A;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(212, 106, 106, 0.3);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 25px;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #FFE4E1;
+        }
+
+        th {
+            background-color: #FFF0F5;
+            color: #D46A6A;
+            font-family: 'Playfair Display', serif;
+        }
+
+        tr:hover {
+            background-color: #FFF8F8;
+        }
+
+        label {
+            color: #D46A6A;
+            font-weight: 600;
+            margin-top: 15px;
+            display: block;
+        }
+
+        #showData {
+            border: 2px dashed #FFB6C1;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Belle Liste</h1>
+        <label for="task">Task ✨</label>
+        <input type="text" name="task" id="task">
+        
+        <label for="description">Description 📖</label>
+        <input type="text" name="description" id="description">
+        
+        <label for="priority">Priority ⚠️</label>
+        <input type="text" name="priority" id="priority">
+        
+        <label for="duedate">Due Date 📅</label>
+        <input type="text" name="duedate" id="duedate">
+        
+        <br>
+        <input type="submit" id="savedata" value="Save Task">
+        <p id="dataSaved"></p>
+        
+        <br>
+        <input type="submit" id="getData" value="View All Tasks">
+        <div id="showData">
+            <table id="Table">
+                <colgroup>
+                    <col style="width:20%">
+                    <col style="width:20%">
+                    <col style="width:20%">
+                    <col style="width:20%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>TASK</th>
+                        <th>DESCRIPTION</th>
+                        <th>PRIORITY</th>
+                        <th>DUE DATE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data will be displayed here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+</body>
+</html>
